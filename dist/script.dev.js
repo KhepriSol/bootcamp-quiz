@@ -27,12 +27,15 @@ startButton.addEventListener("click", function () {
   showQuestion(1);
 });
 
-function showQuestion(questionNumber) {// show the question and options
+function showQuestion(questionNumber) {
+  // show the question and options
+  currentQuestion = questionNumber;
 }
 
 function endQuiz() {// end the quiz and show the form for saving the score
 }
 
+var currentQuestion = 1;
 form.addEventListener("submit", function (event) {
   event.preventDefault(); // Preventing the form from submitting
   // selected options for each question
@@ -41,13 +44,21 @@ form.addEventListener("submit", function (event) {
   var question2 = form.elements.question2; // add more pokemon questions etc
   // check if the selected options are correct
 
-  if (question1.value === "A") {// correct answer
-  } else {// incorrect answer
-    }
+  if (question1.value === "A") {
+    // correct answer
+    showQuestion(2);
+  } else {
+    // incorrect answer
+    timeLeft -= 10;
+  }
 
-  if (question2.value === "A") {// correct answer
-  } else {} // incorrect answer
-    // more questions
+  if (question2.value === "A") {
+    // correct answer
+    showQuestion(3);
+  } else {
+    // incorrect answer
+    timeLeft -= 10;
+  } // more questions
 
 });
 //# sourceMappingURL=script.dev.js.map
