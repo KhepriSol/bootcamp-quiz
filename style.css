@@ -1,0 +1,26 @@
+body {
+    font-family: sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  #timer {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+  
+  #questions {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  #game-over {
+    max-width: 400px;
+    margin: 32px auto;
+    text-align: center;
+  }
+  

@@ -2,6 +2,8 @@
 
 var form = document.getElementById("Pokemon");
 var startButton = document.getElementById("start-button");
+var questionsContainer = document.getElementById("questions");
+var gameOverForm = document.getElementById("game-over");
 var timeLeft = 60; // time in seconds
 
 var timerInterval;
