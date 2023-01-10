@@ -1,10 +1,16 @@
-# bootcamp-quiz
- //pseudo code
-  1. Create an HTML page with a form containing the quiz questions, and a start button.
-2. Style the page using CSS.
-3. When the start button is clicked, start the timer and show the first question.
-4. When the user selects an answer, check if it is correct.
-   a. If the answer is correct, move on to the next question.
-   b. If the answer is incorrect, subtract time from the timer.
-5. When all questions have been answered or the timer reaches 0, end the quiz.
-6. When the quiz is over, show a form for the user to enter their initials and save their score.//
+## Code Quiz
+(WIP)
+I built this code quiz to test my knowledge of JavaScript fundamentals.
+
+Features
+I can take a timed quiz on pokemon.
+I can see my score at the end of the quiz.
+I can save my initials and score to a high scores list.
+
+## Running the Quiz
+I download or clone the repository.
+I open the index.html file in a web browser.
+I click the start button to begin the quiz.
+I answer the questions before the timer runs out.
+I enter my initials and save my score when the game is over.
+I hope you enjoy taking the quiz!

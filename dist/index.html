@@ -5,19 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Document</title>
- </head>
-<body>
-    <h2>Pokemon Quiz</h2>
-        <button id="start-button">Start Quiz</button>
-        <div id="timer">60</div>
-        <div id="questions"></div>
-        <form id="game-over" style="display :none;">
-            <label for="initials">Enter You Initials</label>
-            <input type="text" id="initials"/>
-            <button type="submit">Save Score</button>
-     </form>
-     <script src="script.js"></script>
-    
-</body>
+    <title>Code Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="timer">Time: <span id="timer-value">60</span> seconds</div>
+
+    <h1>Code Quiz</h1>
+    <button id="start-button">Start Quiz</button>
+    <div id="timer"></div>
+    <div id="questions"></div>
+    <form id="game-over" style="display: none;">
+      <label for="initials">Enter your initials:</label>
+      <input type="text" id="initials" />
+      <button type="submit">Save Score</button>
+    </form>
+    <script src="script.js"></script>
+  </body>
 </html>

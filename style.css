@@ -5,6 +5,11 @@ body {
   h1 {
     text-align: center;
   }
+  #start-button {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
   
   #timer {
     text-align: center;
