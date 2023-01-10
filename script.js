@@ -10,3 +10,8 @@ let questions;
 startButton.addEventListener("click", startGame);
 gameOverForm.addEventListener("submit", saveScore);
 
+function startGame() {
+  // Initialize game variables
+  timer = 60;
+  questions = [...]; // questions and answers go here.
+  currentQuestionIndex = 0;
