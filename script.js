@@ -1,7 +1,8 @@
 const form = document.getElementById("Pokemon");
-
-
 const startButton = document.getElementById("start-button");
+
+let timeLeft = 60; // time in seconds
+let timerInterval;
 
 function updateTimer(timeLeft) {
   // update the timer display
@@ -11,8 +12,7 @@ function updateTimer(timeLeft) {
 
 startButton.addEventListener("click", function() {
   // start quiz and timer
-  let timeLeft = 60; // time in seconds
-  let timerInterval = setInterval(function() {
+  timerInterval = setInterval(function() {
     timeLeft--;
     updateTimer(timeLeft); // update the timer display
     if (timeLeft === 0) {
@@ -27,11 +27,12 @@ startButton.addEventListener("click", function() {
 
 function showQuestion(questionNumber) {
   // show the question and options
-  currentQuestion = questionNumber
+  currentQuestion = questionNumber;
 }
 
 function endQuiz() {
   // end the quiz and show the form for saving the score
+  form.style.display = "block";
 }
 
 let currentQuestion = 1;
@@ -61,6 +62,11 @@ form.addEventListener("submit", function(event) {
   }
   // more questions
 });
+
+
+
+
+
 
 
 

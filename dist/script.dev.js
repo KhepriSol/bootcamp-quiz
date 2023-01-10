@@ -2,6 +2,9 @@
 
 var form = document.getElementById("Pokemon");
 var startButton = document.getElementById("start-button");
+var timeLeft = 60; // time in seconds
+
+var timerInterval;
 
 function updateTimer(timeLeft) {
   // update the timer display
@@ -11,9 +14,7 @@ function updateTimer(timeLeft) {
 
 startButton.addEventListener("click", function () {
   // start quiz and timer
-  var timeLeft = 60; // time in seconds
-
-  var timerInterval = setInterval(function () {
+  timerInterval = setInterval(function () {
     timeLeft--;
     updateTimer(timeLeft); // update the timer display
 
@@ -32,7 +33,9 @@ function showQuestion(questionNumber) {
   currentQuestion = questionNumber;
 }
 
-function endQuiz() {// end the quiz and show the form for saving the score
+function endQuiz() {
+  // end the quiz and show the form for saving the score
+  form.style.display = "block";
 }
 
 var currentQuestion = 1;
