@@ -61,4 +61,11 @@ function selectAnswer(event) {
   var selectedChoice = event.target.textContent;
   var correct = questions[currentQuestionIndex].correctChoice === selectedChoice;
 }
+
+if (correct) {
+  displayMessage("Correct!");
+} else {
+  displayMessage("Incorrect!");
+  timer -= 15; // Subtract time for incorrect answer
+}
 //# sourceMappingURL=script.dev.js.map

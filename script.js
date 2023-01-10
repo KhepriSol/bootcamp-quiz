@@ -68,3 +68,9 @@ function startGame() {
     const selectedChoice = event.target.textContent;
     const correct = questions[currentQuestionIndex].correctChoice === selectedChoice;
   }
+  if (correct) {
+    displayMessage("Correct!");
+  } else {
+    displayMessage("Incorrect!");
+    timer -= 15; // Subtract time for incorrect answer
+  }
