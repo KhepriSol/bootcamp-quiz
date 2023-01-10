@@ -16,14 +16,23 @@ var questions = [{
   correctChoice: "claifary"
 } //gonna add more questions
 ];
+var currentQuestionIndex;
 startButton.addEventListener("click", startGame);
 gameOverForm.addEventListener("submit", saveScore);
+
+function startGame() {
+  timer = 60;
+  currentQuestionIndex = 0; // Start timer and display first question
+
+  startTimer();
+  displayQuestion();
+}
 
 function startTimer() {
   // Update timer every second
   timerInterval = setInterval(function () {
     timer--;
-    timerDisplay.textContent = "Time: ".concat(timer); // End game if timer reaches 0
+    timerValue.textContent = timer; // End game when or if the timer reaches 0
 
     if (timer <= 0) {
       endGame();
