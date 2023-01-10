@@ -6,22 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Document</title>
-    
-
-</head>
+ </head>
 <body>
-
-    <form id="Pokemon">
+    <h2>Pokemon Quiz</h2>
         <button id="start-button">Start Quiz</button>
         <div id="timer">60</div>
         <div id="questions"></div>
-        <script src="script.js"></script>
-        <h2>Pokemon Quiz</h2>
-       
-        <!--> more questions ect -->
-        <button id="submit">submit</button>
-    </form>
-
+        <form id="game-over" style="display :none;">
+            <label for="initials">Enter You Initials</label>
+            <input type="text" id="initials"/>
+            <button type="submit">Save Score</button>
+     </form>
+     <script src="script.js"></script>
     
 </body>
 </html>
