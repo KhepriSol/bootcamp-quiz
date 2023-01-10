@@ -39,4 +39,26 @@ function startTimer() {
     }
   }, 1000);
 }
+
+function displayQuestion() {
+  var question = questions[currentQuestionIndex]; // Clear any existing content in the questions container
+
+  questionsContainer.innerHTML = ""; // Add the question text
+
+  var questionElement = document.createElement("p");
+  questionElement.textContent = question.text;
+  questionsContainer.appendChild(questionElement); // Add the answer choices
+
+  question.choices.forEach(function (choice) {
+    var button = document.createElement("button");
+    button.textContent = choice;
+    button.addEventListener("click", selectAnswer);
+    questionsContainer.appendChild(button);
+  });
+}
+
+function selectAnswer(event) {
+  var selectedChoice = event.target.textContent;
+  var correct = questions[currentQuestionIndex].correctChoice === selectedChoice;
+}
 //# sourceMappingURL=script.dev.js.map

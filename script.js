@@ -44,5 +44,27 @@ function startGame() {
       }
     }, 1000);
   }
-
+  function displayQuestion() {
+    const question = questions[currentQuestionIndex];
   
+    // Clear any existing content in the questions container
+    questionsContainer.innerHTML = "";
+  
+    // Add the question text
+    const questionElement = document.createElement("p");
+    questionElement.textContent = question.text;
+    questionsContainer.appendChild(questionElement);
+  
+    // Add the answer choices
+    question.choices.forEach((choice) => {
+      const button = document.createElement("button");
+      button.textContent = choice;
+      button.addEventListener("click", selectAnswer);
+      questionsContainer.appendChild(button);
+    });
+  }
+  
+  function selectAnswer(event) {
+    const selectedChoice = event.target.textContent;
+    const correct = questions[currentQuestionIndex].correctChoice === selectedChoice;
+  }
